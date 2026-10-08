@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif-luxury: 'Cormorant Garamond', Georgia, serif;
+    --font-cinzel: 'Cinzel', Trajan, serif;
+    --font-sans-refined: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans-refined);
+    background-color: #FAF8F5;
+    color: #24211E;
+  }
+}
+
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Trajan, serif;
+}
+
+.font-sans-refined {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+/* Subtle organic grain effect for minimalist luxury feel */
+.bg-grain {
+  background-image: radial-gradient(rgba(36, 33, 30, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.tadelakt-gradient {
+  background: radial-gradient(ellipse at top left, #F5EFEB 0%, #ECE4DB 45%, #E3D9CD 100%);
+}
+
+.gold-shimmer {
+  background: linear-gradient(135deg, #DFBE82 0%, #F5E6CA 25%, #CBA15A 50%, #F4E4C1 75%, #B88E48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Print Specific Rules for High-End Physical Placement */
+@media print {
+  body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-page-break {
+    page-break-before: always;
+  }
+}
